@@ -1,0 +1,18 @@
+<script>
+    var obj = {}, n = 0, limit = 1000;
+    
+    while(n < limit){
+        var s;
+        s = String(n);
+        parse(s);
+        n++;
+    }
+    
+    function parse(value){
+        obj.units = value[value.length-1];
+        obj.tens = value[value.length-2]?value[value.length-2]:"";
+        obj.hundreds = value[value.length-3]?value[value.length-3]:"";
+        document.write("<pre>" + JSON.stringify(obj) + "</pre>");
+    }
+    
+</script>
